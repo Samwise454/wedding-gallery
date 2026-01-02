@@ -16,7 +16,7 @@ const Gallery = () => {
     <div>
         <Nav/>
 
-        <main className="relative mt-8 min-h-screen w-full bg-[url('/bg3.jpg')] bg-cover bg-center bg-no-repeat">
+        <main className="relative mt-8 min-h-screen w-full bg-black bg-cover bg-center bg-no-repeat">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
 
@@ -46,7 +46,7 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div onClick={openShow} id='couple' className="card bg-white w-full shadow-sm">
+                <div onClick={openShow} id='couple' className="card bg-white w-full shadow-sm animate__animated animate__slideInLeft">
                     <figure className="px-4 pt-4">
                         <img
                         src="/couple.jpg"
@@ -58,7 +58,7 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div onClick={openShow} id='reception' className="card bg-white w-full shadow-sm animate__animated animate__slideInRight">
+                <div onClick={openShow} id='reception' className="card bg-white w-full shadow-sm">
                     <figure className="px-4 pt-4">
                         <img
                         src="/bg2.jpg"
