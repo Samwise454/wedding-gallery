@@ -22,7 +22,7 @@ const Gallery = () => {
 
             {/* Cards */}
             <div className='grid grid-cols-2 lg:grid-cols-6 lg:pt-60 p-2 gap-2 overflow-hidden cursor-pointer'>
-                <div onClick={openShow} id='bride' className="card bg-white w-full shadow-sm animate__animated animate__slideInLeft">
+                <div onClick={openShow} id='bride' className="card bg-white w-full shadow-sm ">
                     <figure className="px-4 pt-4">
                         <img
                         src="/bride.jpg"
@@ -46,7 +46,7 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div onClick={openShow} id='couple' className="card bg-white w-full shadow-sm animate__animated animate__slideInLeft">
+                <div onClick={openShow} id='couple' className="card bg-white w-full shadow-sm animate__animated animate__zoomIn">
                     <figure className="px-4 pt-4">
                         <img
                         src="/couple.jpg"
@@ -70,7 +70,7 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div onClick={openShow} id='dance' className="card bg-white w-full shadow-sm animate__animated animate__slideInLeft">
+                <div onClick={openShow} id='dance' className="card bg-white w-full shadow-sm">
                     <figure className="px-4 pt-4">
                         <img
                         src="/dance.jpg"
