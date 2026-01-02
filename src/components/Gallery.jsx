@@ -1,7 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router';
 import 'animate.css';
 import Nav from './Nav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Gallery = () => {
     const navigate = useNavigate();
@@ -19,6 +21,10 @@ const Gallery = () => {
         <main className="relative mt-8 min-h-screen w-full bg-black bg-cover bg-center bg-no-repeat">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
+
+            <Link to={"/"}>
+                <FontAwesomeIcon icon={faArrowLeft} className='absolute top-0 right-0 -mt-6 mr-5 animate__animated animate__slideInRight'/>
+            </Link>
 
             {/* Cards */}
             <div className='grid grid-cols-2 lg:grid-cols-6 lg:pt-60 p-2 gap-2 overflow-hidden cursor-pointer'>
