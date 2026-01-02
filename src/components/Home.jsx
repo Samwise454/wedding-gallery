@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className='absolute inset-0'>
         <Nav/>
-            <main className="relative min-h-screen w-full bg-[url('/bg2.jpg')] bg-cover bg-center bg-no-repeat">
+            <main className="relative min-h-screen w-full bg-[url('/img1.jpg')] bg-cover bg-center bg-no-repeat">
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
 

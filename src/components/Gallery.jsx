@@ -96,7 +96,7 @@ const Gallery = () => {
                         className="rounded-xl min-h- max-h-22 w-full object-cover" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title bg-base-100 px-3 py-1 rounded-full">BTS</h2>
+                        <h2 className="card-title bg-base-100 px-3 py-1 rounded-full">PWP</h2>
                     </div>
                 </div>
             </div>

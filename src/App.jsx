@@ -6,6 +6,8 @@
     import Gallery from './components/Gallery';
     import Show from './components/Show';
     import Story from './components/Story';
+    import Control from './components/Control';
+    import Admin from './components/Admin';
 
     function App() {
       return (
@@ -15,6 +17,8 @@
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/show" element={<Show />} />
           <Route path="/story" element={<Story />} />
+          <Route path="/control" element={<Control />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       );
     }
