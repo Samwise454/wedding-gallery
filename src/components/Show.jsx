@@ -72,18 +72,19 @@ const Show = () => {
     <div>
         <Nav/>
 
+        <Link to={"/Gallery"}>
+            <FontAwesomeIcon icon={faArrowLeft} className='absolute z-2 text-yellow-300 top-0 right-0 mt-6 mr-5 animate__animated animate__slideInRight'/>
+        </Link>
+
         <main className='relative'>
             <div className={toggleLoader}>
                 <div className='loader absolute top-0 left-0 w-full z-10 h-screen bg-black inset-0 flex items-center justify-center'>
                     <span className="loading loading-infinity loading-xl"></span>
                 </div>
             </div>
-            <Link to={"/Gallery"}>
-                <FontAwesomeIcon icon={faArrowLeft} className='absolute top-0 right-0 mt-5 mr-5 animate__animated animate__slideInRight'/>
-            </Link>
 
             {/* Cards */}
-            <div className='grid grid-cols-2 lg:grid-cols-6  p-2 pt-15 gap-2 overflow-y-auto cursor-pointer'>
+            <div className='grid grid-cols-2 lg:grid-cols-6  p-2 pt-10 gap-2 overflow-y-auto cursor-pointer'>
                 {/* <label htmlFor="my_modal_6"></label> */}
                 <label htmlFor="my_modal_6" >
                     <div onClick={zoomImage} id='bg1.jpg' className="card bg-white">

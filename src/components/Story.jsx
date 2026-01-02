@@ -1,10 +1,17 @@
 import React from 'react';
 import Nav from './Nav';
+import { Link } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Story = () => {
   return (
     <div>
       <Nav/>
+      
+        <Link to={"/"}>
+            <FontAwesomeIcon icon={faArrowLeft} className='absolute z-2 text-yellow-300 top-0 right-0 mt-6 mr-5 animate__animated animate__slideInRight'/>
+        </Link>
 
         <main className="relative min-h-screen w-full bg-[url('/bg4.jpg')] bg-cover bg-center bg-no-repeat">
             {/* Overlay */}
