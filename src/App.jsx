@@ -8,6 +8,8 @@
     import Story from './components/Story';
     import Control from './components/Control';
     import Admin from './components/Admin';
+    import Controladmin from './components/Controladmin';
+    import Controldash from './components/Controldash';
 
     function App() {
       return (
@@ -19,6 +21,8 @@
           <Route path="/story" element={<Story />} />
           <Route path="/control" element={<Control />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/Controladmin" element={<Controladmin />} />
+          <Route path="/controldash" element={<Controldash />} />
         </Routes>
       );
     }

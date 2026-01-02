@@ -6,17 +6,19 @@ const Admin = () => {
     <div>
       <Nav/>
 
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-        <legend className="fieldset-legend">Login</legend>
+        <form action="" className='flex items-center justify-center w-full min-h-screen'>
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                <legend className="fieldset-legend text-lg">Login Admin</legend>
 
-        <label className="label">Email</label>
-        <input type="email" className="input" placeholder="Email" />
+                <label htmlFor='username' className="label">Code</label>
+                <input type="text" id='username' className="input" placeholder="Code" />
 
-        <label className="label">Password</label>
-        <input type="password" className="input" placeholder="Password" />
+                <label htmlFor='password' className="label mt-5">Password</label>
+                <input type="password" id='password' className="input" placeholder="Password" />
 
-        <button className="btn btn-neutral mt-4">Login</button>
-        </fieldset>
+                <button className="btn btn-secondary mt-4">Login</button>
+            </fieldset>
+        </form>
     </div>
   )
 }

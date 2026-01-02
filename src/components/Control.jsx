@@ -1,7 +1,21 @@
-import React from 'react'
-import Nav from './Nav'
+import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router';
+import Nav from './Nav';
+import axios from 'axios';
 
 const Control = () => {
+    const [user, setUser] = useState(localStorage.getItem("wedUser"));//this state will contain user logged in status
+
+    const [userData, setUserData] = useState({
+        username: "",
+        password: ""
+    });
+
+    //we use the useEffect below to check whether user is still logged in and then redirect to dashboard
+    useEffect(() => {
+        
+    }, [user]);
+
   return (
     <div>
       <Nav/>

@@ -13,9 +13,9 @@ const Story = () => {
             <FontAwesomeIcon icon={faArrowLeft} className='absolute z-2 text-yellow-300 top-0 right-0 mt-6 mr-5 animate__animated animate__slideInRight'/>
         </Link>
 
-        <main className="relative min-h-screen w-full bg-[url('/bg4.jpg')] bg-cover bg-center bg-no-repeat">
+        <main className="relative min-h-screen w-full bg-[url('/img5.jpg')] bg-cover bg-center bg-no-repeat">
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/60"></div>
             
             <div className='relative z-1 text-center pt-10'>
                 <h2 className='w-full overflow-hidden text-4xl font-bold leading-12'>
@@ -24,7 +24,6 @@ const Story = () => {
                 </h2>
 
                 <p className='mt-2 animate__animated animate__zoomInDown'>
-                    {/* Real moments. Timeless memories. */}
                     <span>
                         Real moments.  
                         <span className="text-rotate ml-3">
@@ -38,7 +37,7 @@ const Story = () => {
                 </p>
 
                 <div className='h-118 shadow-sm rounded-xl mx-2 mt-4 overflow-auto animate__animated animate__slideInUp'>
-                    <p className='text-left backdrop-blur-sm p-2'>
+                    <p className='text-justify backdrop-blur-sm p-2'>
                         "Our story didn't start with a movie-moment gaze across a crowded room. 
                         It started with [mention a relatable, small detail, e.g., a debate over 
                         the best bagel shop or a mutual struggle with a gym locker] in [Year].
