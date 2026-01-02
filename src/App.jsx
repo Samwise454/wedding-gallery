@@ -5,6 +5,7 @@
     import Home from './components/Home';
     import Gallery from './components/Gallery';
     import Show from './components/Show';
+    import Story from './components/Story';
 
     function App() {
       return (
@@ -13,6 +14,7 @@
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/show" element={<Show />} />
+          <Route path="/story" element={<Story />} />
         </Routes>
       );
     }

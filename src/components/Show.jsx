@@ -4,15 +4,19 @@ import Nav from './Nav';
 import 'animate.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faXmark } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 const Show = () => {
     const [uri, setUri] = useState(window.location.href);
     const [zoomedImage, setZoomedImage] = useState("");
-    
+    const [toggleLoader, setToggleLoader] = useState("");
+
     useEffect(() => {
         let splitUri = uri.split("?");
         let code = splitUri[1];
-        
+
+        //after fetching items, hide loader using toggleLoader
+        setToggleLoader('animate__animated animate__zoomOut');
     }, []);
 
     const zoomImage = (e) => {
@@ -69,7 +73,11 @@ const Show = () => {
         <Nav/>
 
         <main className='relative'>
-                
+            <div className={toggleLoader}>
+                <div className='loader absolute top-0 left-0 w-full z-10 h-screen bg-black inset-0 flex items-center justify-center'>
+                    <span className="loading loading-infinity loading-xl"></span>
+                </div>
+            </div>
             <Link to={"/Gallery"}>
                 <FontAwesomeIcon icon={faArrowLeft} className='absolute top-0 right-0 mt-5 mr-5 animate__animated animate__slideInRight'/>
             </Link>
