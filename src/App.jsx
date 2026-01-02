@@ -4,6 +4,7 @@
     import Nav from './components/Nav';
     import Home from './components/Home';
     import Gallery from './components/Gallery';
+    import Show from './components/Show';
 
     function App() {
       return (
@@ -11,6 +12,7 @@
           <Route path="/nav" element={<Nav />} />
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/show" element={<Show />} />
         </Routes>
       );
     }
