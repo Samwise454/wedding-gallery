@@ -110,7 +110,7 @@ const Show = () => {
             }
 
             {/* Cards */}
-            <div className='h-195 grid grid-cols-2 lg:grid-cols-6 p-2 pt-10 gap-2 z-10 overflow-y-scroll cursor-pointer'>
+            <div className='h-165 grid grid-cols-2 lg:grid-cols-6 p-2 pt-2 gap-2 z-10 overflow-y-scroll cursor-pointer'>
                 {/* <label htmlFor="my_modal_6"></label> */}
                 {imgData ?
                     imgData.map((data, dataIndex) => {
