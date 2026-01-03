@@ -105,7 +105,7 @@ const Controldash = () => {
             <div className='w-full oevrflow-x-auto flex items-center justify-center gap-2 pt-10'>
                 <button onClick={handleAction} id='addImage' className='btn btn-primary'>Add Image</button>
                 {/* <button onClick={handleAction} id='addVideo' className='btn btn-primary'>Add Video</button> */}
-                <button onClick={handleAction} id='changePass' className='btn btn-primary'>Change Pass</button>
+                {/* <button onClick={handleAction} id='changePass' className='btn btn-primary'>Change Pass</button> */}
             </div>
 
             {action == "addImage" ?
