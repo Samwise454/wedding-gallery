@@ -18,7 +18,7 @@ const Home = () => {
 
     const handleInput = (e) => {
         let username = e.target.value.toLowerCase();
-        username = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+        username = username.charAt(0).toUpperCase() + username.slice(1);
         setVisitorInput(username);
     }
 
