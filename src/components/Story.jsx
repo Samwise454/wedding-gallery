@@ -13,7 +13,7 @@ const Story = () => {
             <FontAwesomeIcon icon={faArrowLeft} className='absolute z-2 text-yellow-300 top-0 right-0 mt-6 mr-5 animate__animated animate__slideInRight'/>
         </Link>
 
-        <main className="relative min-h-screen w-full bg-[url('/img5.jpg')] bg-cover bg-center bg-no-repeat">
+        <main className="relative min-h-screen w-full bg-[url('/img9.jpg')] bg-cover bg-center bg-no-repeat">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/60"></div>
             

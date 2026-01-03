@@ -52,10 +52,22 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div onClick={openShow} id='couple' className="card bg-white w-full shadow-sm animate__animated animate__zoomIn">
+                <div onClick={openShow} id='church' className="card bg-white w-full shadow-sm animate__animated animate__zoomIn">
                     <figure className="px-4 pt-4">
                         <img
                         src="/couple.jpg"
+                        alt="Shoes"
+                        className="rounded-xl min-h-22 max-h-22 w-full object-cover" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title bg-base-100 px-3 py-1 rounded-full">Church</h2>
+                    </div>
+                </div>
+
+                <div onClick={openShow} id='couple' className="card bg-white w-full shadow-sm">
+                    <figure className="px-4 pt-4">
+                        <img
+                        src="/dance.jpg"
                         alt="Shoes"
                         className="rounded-xl min-h-22 max-h-22 w-full object-cover" />
                     </figure>
@@ -76,19 +88,7 @@ const Gallery = () => {
                     </div>
                 </div>
 
-                <div onClick={openShow} id='dance' className="card bg-white w-full shadow-sm">
-                    <figure className="px-4 pt-4">
-                        <img
-                        src="/dance.jpg"
-                        alt="Shoes"
-                        className="rounded-xl min-h-22 max-h-22 w-full object-cover" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title bg-base-100 px-3 py-1 rounded-full">Dance</h2>
-                    </div>
-                </div>
-
-                <div onClick={openShow} id='bts' className="card bg-white w-full shadow-sm">
+                <div onClick={openShow} id='pwp' className="card bg-white w-full shadow-sm">
                     <figure className="px-4 pt-4">
                         <img
                         src="/bts.jpg"
