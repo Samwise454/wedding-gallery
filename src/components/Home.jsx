@@ -17,7 +17,8 @@ const Home = () => {
     }, [visitor]);
 
     const handleInput = (e) => {
-        setVisitorInput(e.target.value);
+        let username = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
+        setVisitorInput(username);
     }
 
     const setVisitorKey = (e) => {
