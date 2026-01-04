@@ -22,12 +22,12 @@ const Gallery = () => {
             <FontAwesomeIcon icon={faArrowLeft} className='absolute z-2 text-yellow-300 top-0 right-0 mt-6 mr-5 animate__animated animate__slideInRight'/>
         </Link>
 
-        <main className="relative mt-8 min-h-screen w-full bg-black bg-cover bg-center bg-no-repeat">
+        <main className="relative mt-2 h-full w-full bg-black bg-cover bg-center bg-no-repeat">
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
 
             {/* Cards */}
-            <div className='grid grid-cols-2 lg:grid-cols-6 lg:pt-60 p-2 gap-2 overflow-hidden cursor-pointer'>
+            <div className='h-full overflow-auto z-10 grid grid-cols-2 lg:grid-cols-6 lg:pt-60 p-2 gap-2'>
                 <div onClick={openShow} id='bride' className="card bg-white w-full shadow-sm ">
                     <figure className="px-4 pt-4">
                         <img

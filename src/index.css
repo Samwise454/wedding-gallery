@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@plugin "daisyui" {
+  themes: dark --default, dark --prefersdark;
+}
+
 @utility btn {
   @apply rounded-full;
   background: black;
@@ -18,5 +22,5 @@
 body {
   background-color: black;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }

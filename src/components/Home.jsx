@@ -28,7 +28,9 @@ const Home = () => {
 
   return (
     <div className='absolute inset-0'>
-        <Nav/>
+        <section className='fixed top-0 left-0 w-full z-20'>
+            <Nav/>
+        </section>
             {/* Open the modal using document.getElementById('ID').showModal() method */}
             {/* <button className="btn" >open modal</button> */}
             <dialog id="my_modal_1" className="modal">
@@ -36,7 +38,7 @@ const Home = () => {
                 <h3 className="font-bold text-lg">Welcome to Wendom 2026!</h3>
                 <p className="py-4">Enter PassKey...</p>
                 <section>
-                    <input onChange={handleInput} type="text" placeholder="Wendom" className="input validator input-warning" required />
+                    <input onChange={handleInput} type="text" placeholder="Type in pass.." className="input validator input-warning" required />
                     <p className="validator-hint hidden">Required</p>
                 </section>
                 <div className="modal-action">
