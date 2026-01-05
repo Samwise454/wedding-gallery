@@ -23,7 +23,7 @@ const Story = () => {
                     <span className='block animate__animated animate__fadeInLeft'>2026</span>
                 </h2>
 
-                <p className='mt-2 animate__animated animate__zoomInDown'>
+                <p className='mt-6 animate__animated animate__zoomInDown'>
                     <span>
                         Real moments.  
                         <span className="text-rotate ml-3">
@@ -36,7 +36,7 @@ const Story = () => {
                     </span>
                 </p>
 
-                <div className='h-full shadow-sm rounded-xl mx-2 mt-15 overflow-auto animate__animated animate__slideInUp'>
+                <div className='h-full shadow-sm rounded-xl mx-2 mt-18 overflow-auto animate__animated animate__slideInUp'>
                     <p className='text-justify backdrop-blur-sm p-2'>
                         Our story didn't start with a movie-moment gaze across 
                         a crowded room. It started with a football club banter. 
