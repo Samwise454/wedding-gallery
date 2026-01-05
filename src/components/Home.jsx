@@ -74,7 +74,7 @@ const Home = () => {
 
                     <p>
                         <button onClick={openGalary} className='btn btn-secondary text-lg px-10 py-6 animate__animated animate__zoomInUp mr-2'>Gallery</button>
-                        <Link to={"/Story"}><button className='btn btn-secondary text-lg px-10 py-6 animate__animated animate__zoomInUp ml-2'>Stories</button></Link>
+                        <Link to={"/Story"}><button className='btn btn-secondary text-lg px-10 py-6 animate__animated animate__zoomInUp ml-2'>Story</button></Link>
                     </p>
                 </div>
             </main>

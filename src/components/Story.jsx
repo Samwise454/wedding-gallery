@@ -36,7 +36,7 @@ const Story = () => {
                     </span>
                 </p>
 
-                <div className='h-full shadow-sm rounded-xl mx-2 mt-4 overflow-auto animate__animated animate__slideInUp'>
+                <div className='h-full shadow-sm rounded-xl mx-2 mt-15 overflow-auto animate__animated animate__slideInUp'>
                     <p className='text-justify backdrop-blur-sm p-2'>
                         Our story didn't start with a movie-moment gaze across 
                         a crowded room. It started with a football club banter. 
@@ -48,7 +48,7 @@ const Story = () => {
                         we needed to be. The proposal was perfectly imperfect 
                         on a rainy Tuesday. No frills, just us. We can't wait 
                         to celebrate the start of our next chapter with you all
-                         on the 6th of January, 2026.
+                        on the 6th of January, 2026.
                     </p>
                 </div>
             </div>
