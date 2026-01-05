@@ -38,18 +38,17 @@ const Story = () => {
 
                 <div className='h-full shadow-sm rounded-xl mx-2 mt-4 overflow-auto animate__animated animate__slideInUp'>
                     <p className='text-justify backdrop-blur-sm p-2'>
-                        "Our story didn't start with a movie-moment gaze across a crowded room. 
-                        It started with [mention a relatable, small detail, e.g., a debate over 
-                        the best bagel shop or a mutual struggle with a gym locker] in [Year].
-                        Real love, for us, has always been found in the quiet intervals between big 
-                        milestones. It's the [mention a specific 'real' habit, e.g., early morning 
-                        coffee runs or shared playlists for road trips] that made us realize this was it. 
-                        We've navigated [mention a life change, e.g., three cross-country moves or 
-                        adopting a senior dog] and realized that as long as we were laughing through 
-                        the chaos, we were exactly where we needed to be.
-                        The proposal was [Description: e.g., perfectly imperfect on a rainy Tuesday / a 
-                        total surprise during a backyard pizza night]. No frills, just us. We can't wait to 
-                        celebrate the start of our next chapter with you all on [Wedding Date]."
+                        Our story didn't start with a movie-moment gaze across 
+                        a crowded room. It started with a football club banter. 
+                        Real love, for us, has always been found in the quiet 
+                        intervals between big milestones. It's the passion for 
+                        the sports and meticulousness that made us realize this 
+                        was it. We've this road and realized that as long as we 
+                        were laughing through the chaos, we were exactly where 
+                        we needed to be. The proposal was perfectly imperfect 
+                        on a rainy Tuesday. No frills, just us. We can't wait 
+                        to celebrate the start of our next chapter with you all
+                         on the 6th of January, 2026.
                     </p>
                 </div>
             </div>

@@ -7,23 +7,29 @@ import 'animate.css';
 
 const Home = () => {
     const navigate = useNavigate();
-    const [visitor, setVisitor] = useState(localStorage.getItem("wedVisitor"));
-    const [visitorInput, setVisitorInput] = useState("");
+    // const [visitor, setVisitor] = useState(localStorage.getItem("wedVisitor"));
+    // const [visitorInput, setVisitorInput] = useState("");
 
-    useEffect(() => {
-        if (visitor == null || visitor == "") {
-            document.getElementById('my_modal_1').showModal();
-        }
-    }, [visitor]);
+    // useEffect(() => {
+    //     if (visitor == null || visitor == "") {
+    //         document.getElementById('my_modal_1').showModal();
+    //     }
+    // }, [visitor]);
 
-    const handleInput = (e) => {
-        let username = e.target.value.toLowerCase();
-        username = username.charAt(0).toUpperCase() + username.slice(1);
-        setVisitorInput(username);
-    }
+    // const handleInput = (e) => {
+    //     let username = e.target.value.toLowerCase();
+    //     username = username.charAt(0).toUpperCase() + username.slice(1);
+    //     setVisitorInput(username);
+    // }
 
-    const setVisitorKey = (e) => {
-        localStorage.setItem('wedVisitor', visitorInput);
+    // const setVisitorKey = (e) => {
+    //     localStorage.setItem('wedVisitor', visitorInput);
+    // }
+
+    const openGalary = () => {
+        let visitKey = "Wendom";
+        localStorage.setItem('wedVisitor', visitKey);
+        navigate("/Gallery");
     }
 
   return (
@@ -33,7 +39,7 @@ const Home = () => {
         </section>
             {/* Open the modal using document.getElementById('ID').showModal() method */}
             {/* <button className="btn" >open modal</button> */}
-            <dialog id="my_modal_1" className="modal">
+            {/* <dialog id="my_modal_1" className="modal">
             <div className="modal-box">
                 <h3 className="font-bold text-lg">Welcome to Wendom 2026!</h3>
                 <p className="py-4">Enter PassKey...</p>
@@ -43,12 +49,11 @@ const Home = () => {
                 </section>
                 <div className="modal-action">
                     <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
                         <button onClick={setVisitorKey} className="btn">Submit</button>
                     </form>
                 </div>
             </div>
-            </dialog>
+            </dialog> */}
 
             <main className="relative min-h-screen w-full bg-[url('/img1.jpg')] bg-cover bg-center bg-no-repeat">
                 {/* Overlay */}
@@ -68,7 +73,7 @@ const Home = () => {
                     </p>
 
                     <p>
-                        <Link to={"/Gallery"}><button className='btn btn-secondary text-lg px-10 py-6 animate__animated animate__zoomInUp mr-2'>Gallery</button></Link>
+                        <button onClick={openGalary} className='btn btn-secondary text-lg px-10 py-6 animate__animated animate__zoomInUp mr-2'>Gallery</button>
                         <Link to={"/Story"}><button className='btn btn-secondary text-lg px-10 py-6 animate__animated animate__zoomInUp ml-2'>Stories</button></Link>
                     </p>
                 </div>

@@ -135,17 +135,17 @@ const Controldash = () => {
 
     useEffect(() => {
         if (selectedImg.length > 0) {
-            setDelBtn(true);
+            setDelBtn("true");
         }
         else {
-            setDelBtn(false)
+            setDelBtn("false")
         }
     }, [selectedImg]);
 
     const pickImage = (e) => {
         let pickedImg = e.currentTarget.id;
         let checkId = document.querySelector("#card_"+pickedImg);
-
+        
         if (selectedImg.includes(pickedImg)) {
             setSelectedImg(prev => prev.filter(item => item !== pickedImg));
             checkId.classList.add("hidden");
@@ -158,6 +158,7 @@ const Controldash = () => {
 
     const deleteImg = () => {
         let data = {//for deleting of image
+            category: imgDelCat,
             agent: agent,
             img: selectedImg//array of selected images
         }
@@ -166,15 +167,21 @@ const Controldash = () => {
             category: imgDelCat,
             agent: agent
         }
-
+// console.log(fetchImgParam);
         const handleResponse = (msg) => {
+            // let allCard = document.querySelector(".allCard");
+            // allCard.classList.add("hidden");
             if (msg == "sw12") {
                 setDelBtn(msg);
+                setTimeout(() => {
+                    setDelBtn("true");
+                }, 3000);
             }
             else if (msg == "sw321") {
                 setDelBtn(msg);
                 setTimeout(() => {
                     setSelectedImg([]);
+                    setDelBtn("false");
                 }, 3000);
             }
         }
@@ -183,12 +190,13 @@ const Controldash = () => {
             try {
                 const response = await axios.post(delImage, JSON.stringify(data));
                 if (response.status === 200) {
+                    console.log(response.data);
                     if (response.data.code === "sw321") {
                         fetchImage(fetchImgParam);
-                        handleResponse(response.data.msg)
+                        handleResponse("sw321");
                     }
                     else {
-                        handleResponse(response.data.msg)
+                        handleResponse("sw12");
                     }
                 }
             } catch (err) {
@@ -212,7 +220,7 @@ const Controldash = () => {
         <main className='bg-base-200 p-4 min-h-screen'>
             <div className='w-full oevrflow-x-auto flex items-center justify-center gap-2 pt-10'>
                 <button onClick={handleAction} id='addImage' className='btn btn-primary'>Add Image</button>
-                <button onClick={handleAction} id='removeImage' className='btn btn-primary'>Remove Image</button>
+                {/* <button onClick={handleAction} id='removeImage' className='btn btn-primary'>Remove Image</button> */}
                 {/* <button onClick={handleAction} id='addVideo' className='btn btn-primary'>Add Video</button> */}
                 {/* <button onClick={handleAction} id='changePass' className='btn btn-primary'>Change Pass</button> */}
             </div>
@@ -292,7 +300,17 @@ const Controldash = () => {
                                     <button onClick={deleteImg} className='btn btn-secondary'>Delete Image</button>
                                 </section>
                             :
-                                ""
+                                delBtn == "sw12" ?
+                                    <section className='text-right mb-5'>
+                                        <button className='btn btn-secondary'>Error</button>
+                                    </section>
+                                :
+                                    delBtn == "false" ?
+                                        ""
+                                    :
+                                        <section className='text-right mb-5'>
+                                            <button onClick={deleteImg} className='btn btn-secondary'>Delete Image</button>
+                                        </section>
                             }
 
                             <div className='h-full grid grid-cols-4 lg:grid-cols-8 p-2 pt-2 gap-2'>
@@ -300,7 +318,7 @@ const Controldash = () => {
                                     fetchedImage.map((data, dataIndex) => {
                                         return (
                                             <div key={dataIndex} className='relative'>
-                                                <section id={"card_"+data.img} className='hidden'>
+                                                <section id={"card_"+data.img} className='allCard hidden'>
                                                     <FontAwesomeIcon icon={faCircleCheck} className='absolute top-0 right-0 z-10 text-green-600 bg-white rounded-full py-0.5'/>    
                                                 </section>                                                
                                                 <label htmlFor="my_modal_6">
@@ -322,11 +340,21 @@ const Controldash = () => {
                             </div>
 
                             {delBtn == "true" ?
-                                <section className='text-right mt-5'>
+                                <section className='text-right mb-5'>
                                     <button onClick={deleteImg} className='btn btn-secondary'>Delete Image</button>
                                 </section>
                             :
-                                ""
+                                delBtn == "sw12" ?
+                                    <section className='text-right mb-5'>
+                                        <button className='btn btn-secondary'>Error</button>
+                                    </section>
+                                :
+                                    delBtn == "false" ?
+                                        ""
+                                    :
+                                        <section className='text-right mb-5'>
+                                            <button onClick={deleteImg} className='btn btn-secondary'>Delete Image</button>
+                                        </section>
                             }
                         </div>
                     </div>
